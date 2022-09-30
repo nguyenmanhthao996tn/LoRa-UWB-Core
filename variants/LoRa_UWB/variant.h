@@ -54,7 +54,7 @@
 #include "USBAPI.h"
 #include "Uart.h"
 #endif // __cplusplus
-
+#include "ArduinoIDEMenuConfig.h"
 #ifdef __cplusplus
 extern "C"
 {
@@ -81,6 +81,15 @@ extern "C"
 #define PIN_LED3             PIN_LED_TXL
 #define LED_BUILTIN          PIN_LED_13
 
+#if (LED_ENABLE == LED_ENABLED_TRUE)
+#define LED_RED_PIN 20  // PB9
+#define LED_BLUE_PIN 44 // PC13
+#elif (LED_ENABLE == LED_ENABLED_FALSE)
+#define LED_RED_PIN -1
+#define LED_BLUE_PIN -1
+#else
+#error LEDs option is not defined!
+#endif
 /*
  * Analog pins
  */
@@ -113,11 +122,51 @@ static const uint8_t DAC1 = PIN_DAC1;
 #define DAC_RESOLUTION		12
 
 // Other pins
-#define PIN_ATN              (38ul)
-static const uint8_t ATN = PIN_ATN;
+// #define PIN_ATN              (38ul)
+// static const uint8_t ATN = PIN_ATN;
 
-#define PIN_BUTTON           (44l)
+#define PIN_BUTTON           (38l) // PA8
 static const uint8_t BUTTON = PIN_BUTTON;
+
+/**
+ * Power Control
+ */
+#define PWR_UWB_EN 30     // PA0
+#define PWR_TRANSLATOR_EN 31 // PA1
+
+/**
+ * LoRa Module
+ */
+#define DIO1_E22_PIN 39 // PC7
+#define BUSY_E22_PIN 2  // PB12
+#define NRST_E22_PIN 14 // PA4
+#define MISO_E22_PIN 12 // PC11
+#define MOSI_E22_PIN 11 // PC12
+#define SCK_E22_PIN 13  // PC10
+#define NSS_E22_PIN 10  // PD2
+#define RXEN_E22_PIN 1  // PC4
+
+/**
+ *  RF Switch
+ */
+#define RFSW1_V1 3 // PB13
+#define RFSW1_V2 4 // PB14
+
+/**
+ *  UWB Module - BeSpoon MOD1
+ */
+#define LVS_ENABLE_PIN 41     // PA15
+#define LVS_SPI_CLK_PIN 24    // PB3
+#define LVS_SPI_MISO_PIN 22   // PB4
+#define LVS_SPI_MOSI_PIN 23   // PB5
+#define LVS_SPI_CS_PIN 43     // PB6
+#define LVS_MCU_IT_PIN 42     // PB7
+#define LVS_BOOTMODE_PIN 17   // PC2
+#define LVS_WAKEUP_PIN 21     // PB8
+#define LVS_MODESWITCH_PIN 15 // PA5
+#define LVS_TX_PIN 8          // PA3
+#define LVS_RX_PIN 9          // PA2
+#define LVS_RESET_PIN 16      // PC3
 
 /*
  * Serial interfaces

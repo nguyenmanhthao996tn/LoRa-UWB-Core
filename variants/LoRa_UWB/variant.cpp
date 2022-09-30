@@ -136,7 +136,7 @@ extern const unsigned int g_Serial2Mode = UART_MODE_RX_DMA | UART_MODE_RX_DMA_SE
 
 extern const stm32l4_uart_pins_t g_Serial3Pins = { GPIO_PIN_PA3_USART2_RX, GPIO_PIN_PA2_USART2_TX, GPIO_PIN_NONE, GPIO_PIN_NONE };
 extern const unsigned int g_Serial3Instance = UART_INSTANCE_USART2;
-extern const unsigned int g_Serial3Mode = 0;
+extern const unsigned int g_Serial3Mode = UART_MODE_RX_DMA | UART_MODE_TX_DMA;
 
 extern const stm32l4_uart_pins_t g_Serial4Pins = { GPIO_PIN_PD2_UART5_RX, GPIO_PIN_PC12_UART5_TX, GPIO_PIN_NONE, GPIO_PIN_NONE };
 extern const unsigned int g_Serial4Instance = UART_INSTANCE_UART5;

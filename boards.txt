@@ -9,7 +9,7 @@ menu.led=LEDs
 
 LoRa_UWB.name=LoRa UWB Board
 LoRa_UWB.vid.0=0x1209
-LoRa_UWB.pid.0=0x62f0
+LoRa_UWB.pid.0=0x62f1
 
 LoRa_UWB.upload.tool=stm32l4_dfu
 LoRa_UWB.upload.protocol=dfu
@@ -24,11 +24,11 @@ LoRa_UWB.build.board=Generic_STM32L496RG
 LoRa_UWB.build.arch=STM32L4
 LoRa_UWB.build.core=stm32l4
 LoRa_UWB.build.vid=0x1209
-LoRa_UWB.build.pid=0x62f0
+LoRa_UWB.build.pid=0x62f1
 LoRa_UWB.build.did=0xffff
 LoRa_UWB.build.usb_manufacturer="UCA-LEAT"
 LoRa_UWB.build.usb_product="LoRa-UWB"
-LoRa_UWB.build.extra_flags=-DSTM32L496xx -D__FPU_PRESENT=1 -march=armv7e-m -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -mabi=aapcs -mslow-flash-data -fsingle-precision-constant {build.usb_flags} {build.dosfs_flags}
+LoRa_UWB.build.extra_flags=-DSTM32L496xx -D__FPU_PRESENT=1 -march=armv7e-m -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -mabi=aapcs -mslow-flash-data -fsingle-precision-constant {build.usb_flags} {build.dosfs_flags} {build.other_flags}
 LoRa_UWB.build.ldscript=linker_scripts/STM32L496RG_FLASH.ld
 LoRa_UWB.build.openocdscript=openocd_scripts/stm32l496rg.cfg
 LoRa_UWB.build.variant=LoRa_UWB
@@ -41,7 +41,7 @@ LoRa_UWB.menu.usb.none=No USB
 LoRa_UWB.menu.usb.none.build.usb_type=USB_TYPE_NONE
 
 LoRa_UWB.menu.version_flags.v100=Rev 1.0.0
-LoRa_UWB.menu.version_flags.v100.build.usb_type=V1_0_0
+LoRa_UWB.menu.version_flags.v100.build.version=V1_0_0
 
 LoRa_UWB.menu.led.enable=Enabled
 LoRa_UWB.menu.led.enable.build.led_enabled=LED_ENABLED_TRUE

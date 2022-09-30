@@ -1,0 +1,9 @@
+#ifndef __ARDUINO_IDE_MENU_CONFIG_H__
+#define __ARDUINO_IDE_MENU_CONFIG_H__
+
+#define LED_ENABLED_TRUE 0
+#define LED_ENABLED_FALSE 1
+
+#define V1_0_0 0
+
+#endif /* __ARDUINO_IDE_MENU_CONFIG_H__ */
