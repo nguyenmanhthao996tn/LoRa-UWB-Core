@@ -1,0 +1,93 @@
+menu.usb=USB Type
+menu.region_flags=LoRaWAN Region
+menu.version_flags=Board version
+menu.dosfs=DOSFS
+menu.speed=CPU Speed
+menu.opt=Optimize
+menu.led=LEDs
+
+
+LoRa_UWB.name=LoRa UWB Board
+LoRa_UWB.vid.0=0x1209
+LoRa_UWB.pid.0=0x62f0
+
+LoRa_UWB.upload.tool=stm32l4_dfu
+LoRa_UWB.upload.protocol=dfu
+LoRa_UWB.upload.maximum_size=1032192
+LoRa_UWB.upload.use_1200bps_touch=true
+LoRa_UWB.upload.wait_for_upload_port=false
+LoRa_UWB.upload.native_usb=false
+
+LoRa_UWB.build.mcu=cortex-m4
+LoRa_UWB.build.f_cpu=80000000L
+LoRa_UWB.build.board=Generic_STM32L496RG
+LoRa_UWB.build.arch=STM32L4
+LoRa_UWB.build.core=stm32l4
+LoRa_UWB.build.vid=0x1209
+LoRa_UWB.build.pid=0x62f0
+LoRa_UWB.build.did=0xffff
+LoRa_UWB.build.usb_manufacturer="UCA-LEAT"
+LoRa_UWB.build.usb_product="LoRa-UWB"
+LoRa_UWB.build.extra_flags=-DSTM32L496xx -D__FPU_PRESENT=1 -march=armv7e-m -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -mabi=aapcs -mslow-flash-data -fsingle-precision-constant {build.usb_flags} {build.dosfs_flags}
+LoRa_UWB.build.ldscript=linker_scripts/STM32L496RG_FLASH.ld
+LoRa_UWB.build.openocdscript=openocd_scripts/stm32l496rg.cfg
+LoRa_UWB.build.variant=LoRa_UWB
+LoRa_UWB.build.variant_system_libs="-L{runtime.platform.path}/system/STM32L4xx/Lib" "-L{runtime.platform.path}/system/CMSIS/Lib" -lstm32l496 -larm_cortexM4lf_math
+LoRa_UWB.build.variant_system_include="-I{runtime.platform.path}/system/CMSIS/Include" "-I{runtime.platform.path}/system/CMSIS/Device/ST/STM32L4xx/Include" "-I{runtime.platform.path}/system/STM32L4xx/Include" 
+
+LoRa_UWB.menu.usb.cdc=Serial
+LoRa_UWB.menu.usb.cdc.build.usb_type=USB_TYPE_CDC
+LoRa_UWB.menu.usb.none=No USB
+LoRa_UWB.menu.usb.none.build.usb_type=USB_TYPE_NONE
+
+LoRa_UWB.menu.version_flags.v100=Rev 1.0.0
+LoRa_UWB.menu.version_flags.v100.build.usb_type=V1_0_0
+
+LoRa_UWB.menu.led.enable=Enabled
+LoRa_UWB.menu.led.enable.build.led_enabled=LED_ENABLED_TRUE
+LoRa_UWB.menu.led.disable=Disabled
+LoRa_UWB.menu.led.disable.build.led_enabled=LED_ENABLED_FALSE
+
+LoRa_UWB.build.dosfs_sdcard=0
+LoRa_UWB.build.dosfs_sflash=0
+
+LoRa_UWB.menu.speed.80=80 MHz
+LoRa_UWB.menu.speed.80.build.f_cpu=80000000L
+LoRa_UWB.menu.speed.72=72 MHz
+LoRa_UWB.menu.speed.72.build.f_cpu=72000000L
+LoRa_UWB.menu.speed.64=64 MHz
+LoRa_UWB.menu.speed.64.build.f_cpu=64000000L
+LoRa_UWB.menu.speed.48=48 MHz
+LoRa_UWB.menu.speed.48.build.f_cpu=48000000L
+LoRa_UWB.menu.speed.32=32 MHz
+LoRa_UWB.menu.speed.32.build.f_cpu=32000000L
+LoRa_UWB.menu.speed.24=24 MHz
+LoRa_UWB.menu.speed.24.build.f_cpu=24000000L
+LoRa_UWB.menu.speed.16=16 MHz
+LoRa_UWB.menu.speed.16.build.f_cpu=16000000L
+LoRa_UWB.menu.speed.8=8 MHz (No USB)
+LoRa_UWB.menu.speed.8.build.f_cpu=8000000L
+LoRa_UWB.menu.speed.4=4 MHz (No USB)
+LoRa_UWB.menu.speed.4.build.f_cpu=4000000L
+LoRa_UWB.menu.speed.2=2 MHz (No USB)
+LoRa_UWB.menu.speed.2.build.f_cpu=2000000L
+LoRa_UWB.menu.speed.1=1 MHz (No USB)
+LoRa_UWB.menu.speed.1.build.f_cpu=1000000L
+
+LoRa_UWB.menu.opt.os=Smallest Code
+LoRa_UWB.menu.opt.os.build.flags.optimize=-Os
+LoRa_UWB.menu.opt.os.build.flags.ldspecs=--specs=nano.specs
+LoRa_UWB.menu.opt.o3=Fastest
+LoRa_UWB.menu.opt.o3.build.flags.optimize=-O3
+LoRa_UWB.menu.opt.o3.build.flags.ldspecs=
+
+LoRa_UWB.menu.region_flags.EU868=Europe 868
+LoRa_UWB.menu.region_flags.EU868.build.region=R_EU868
+LoRa_UWB.menu.region_flags.US915=US 915
+LoRa_UWB.menu.region_flags.US915.build.region=R_US915
+LoRa_UWB.menu.region_flags.AU915=AU 915
+LoRa_UWB.menu.region_flags.AU915.build.region=R_AU915
+LoRa_UWB.menu.region_flags.AS923=Asia AS923
+LoRa_UWB.menu.region_flags.AS923.build.region=R_AS923
+LoRa_UWB.menu.region_flags.IN865=India 865
+LoRa_UWB.menu.region_flags.IN865.build.region=R_IN865
