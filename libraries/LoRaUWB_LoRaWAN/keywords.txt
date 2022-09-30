@@ -1,0 +1,29 @@
+#######################################
+# Syntax Coloring Map For LoRaUWB_LED
+#######################################
+
+#######################################
+# Datatypes (KEYWORD1)
+#######################################
+
+BoardLoRaWAN	KEYWORD1
+
+#######################################
+# Methods and Functions (KEYWORD2)
+#######################################
+
+getStatus	KEYWORD2
+getStatusString	KEYWORD2
+setNetworkKey	KEYWORD2
+setAppKey	KEYWORD2
+setDeviceAddress	KEYWORD2
+getNetworkKey	KEYWORD2
+getAppKey	KEYWORD2
+getDeviceAddress	KEYWORD2
+begin	KEYWORD2
+sendPacket	KEYWORD2
+
+#######################################
+# Constants (LITERAL1)
+#######################################
+

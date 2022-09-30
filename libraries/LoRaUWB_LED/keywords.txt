@@ -1,0 +1,25 @@
+#######################################
+# Syntax Coloring Map For LoRaUWB_LED
+#######################################
+
+#######################################
+# Datatypes (KEYWORD1)
+#######################################
+
+BoardLed	KEYWORD1
+
+#######################################
+# Methods and Functions (KEYWORD2)
+#######################################
+
+ledRedOn	KEYWORD2
+ledRedOff	KEYWORD2
+ledRedBlink	KEYWORD2
+ledBlueOn	KEYWORD2
+ledBlueOff	KEYWORD2
+ledBlueBlink	KEYWORD2
+
+#######################################
+# Constants (LITERAL1)
+#######################################
+

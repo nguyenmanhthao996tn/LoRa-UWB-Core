@@ -1,0 +1,25 @@
+#######################################
+# Syntax Coloring Map For LoRa
+#######################################
+
+#######################################
+# Datatypes (KEYWORD1)
+#######################################
+
+#######################################
+# Methods and Functions (KEYWORD2)
+#######################################
+
+lsCreateDefaultSX1276Config	 KEYWORD2
+lsCreateDefaultSX126xConfig	 KEYWORD2
+lsCreateDefaultLoraTxParams	 KEYWORD2
+lsCreateDefaultLoraWANParams	 KEYWORD2
+lsInitSX1276	 KEYWORD2
+lsInitSX126x	 KEYWORD2
+lsSendLora	 KEYWORD2
+lsSendLoraWAN	 KEYWORD2
+lsErrorToString	 KEYWORD2
+
+#######################################
+# Constants (LITERAL1)
+#######################################
