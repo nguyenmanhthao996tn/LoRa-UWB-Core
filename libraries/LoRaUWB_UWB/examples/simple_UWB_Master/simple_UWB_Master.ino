@@ -13,5 +13,5 @@ void setup(void)
 void loop(void)
 {
   delay(1000);
-  Serial.println(BoardUWB.readLastestData());
+  Serial.println(BoardUWB.readLastestDataJSON());
 }

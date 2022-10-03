@@ -2,8 +2,6 @@
 
 const char *input = "{DT:76,ID:2934,TAGID:1849,LQI:57,DIST:0.78F}";
 
-ParserClass parser;
-
 void setup() {
   Serial.begin(9600);
   while (!Serial && (millis() < 5000)) {}
@@ -13,7 +11,7 @@ void setup() {
 
   UWB_1D_Data_t data;
   uint32_t start_t = millis();
-  bool result = parser.parse_1D_JSON(input, data);
+  bool result = parser.parse_1D_JSON(input, &data);
   uint32_t stop_t = millis();
 
   if (result)

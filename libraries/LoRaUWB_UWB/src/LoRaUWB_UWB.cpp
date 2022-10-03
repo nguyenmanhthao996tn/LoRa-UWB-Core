@@ -2,8 +2,10 @@
 
 UWBClass::UWBClass(void)
 {
+  memset((void *)lastest_command, 0, 1024);
   memset((void *)buffer, 0, 1024);
   buffer_index = 0;
+  bufferReading = 0;
 
   /**** GPIO Init ****/
   // LDOs
@@ -150,20 +152,32 @@ void UWBClass::unpause(void)
   digitalWrite(LVS_ENABLE_PIN, HIGH);
 }
 
+bool UWBClass::readLastestData(UWB_1D_Data_t *data)
+{
+  if (data == NULL)
+  {
+    return false;
+  }
+
+  return parser.parse_1D_JSON(lastest_command, *data);
+}
+
 void UWBClass::process(char input)
 {
   if (input == '{')
   {
+    bufferReading = 1;
     buffer_index = 0;
     memset((void *)buffer, 0, 1024);
   }
 
   buffer[buffer_index++] = input;
 
-  if (input == '}')
+  if ((bufferReading == 1) && (input == '}'))
   {
     // TODO: Parse information from buffer
     memcpy(lastest_command, buffer, buffer_index);
+    lastest_command[buffer_index] = '\0';
   }
 }
 

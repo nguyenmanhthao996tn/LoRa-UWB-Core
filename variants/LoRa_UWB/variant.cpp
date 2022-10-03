@@ -117,6 +117,7 @@ extern const PinDescription g_APinDescription[NUM_TOTAL_PINS] =
 
     // 44 - Button 
     { GPIOC, GPIO_PIN_MASK(GPIO_PIN_PC13), GPIO_PIN_PC13,           (PIN_ATTR_EXTI | PIN_ATTR_WKUP2),                               PWM_INSTANCE_NONE,  PWM_CHANNEL_NONE, ADC_INPUT_NONE },
+    { GPIOH, GPIO_PIN_MASK(GPIO_PIN_PD2),  GPIO_PIN_PH3,            (PIN_ATTR_EXTI),                                                PWM_INSTANCE_NONE,  PWM_CHANNEL_NONE, ADC_INPUT_NONE },
 };
 
 extern const unsigned int g_PWMInstances[PWM_INSTANCE_COUNT] = {

@@ -74,12 +74,12 @@ LoRa_UWB.menu.speed.2.build.f_cpu=2000000L
 LoRa_UWB.menu.speed.1=1 MHz (No USB)
 LoRa_UWB.menu.speed.1.build.f_cpu=1000000L
 
-LoRa_UWB.menu.opt.os=Smallest Code
-LoRa_UWB.menu.opt.os.build.flags.optimize=-Os
-LoRa_UWB.menu.opt.os.build.flags.ldspecs=--specs=nano.specs
 LoRa_UWB.menu.opt.o3=Fastest
 LoRa_UWB.menu.opt.o3.build.flags.optimize=-O3
 LoRa_UWB.menu.opt.o3.build.flags.ldspecs=
+LoRa_UWB.menu.opt.os=Smallest Code
+LoRa_UWB.menu.opt.os.build.flags.optimize=-Os
+LoRa_UWB.menu.opt.os.build.flags.ldspecs=--specs=nano.specs
 
 LoRa_UWB.menu.region_flags.EU868=Europe 868
 LoRa_UWB.menu.region_flags.EU868.build.region=R_EU868

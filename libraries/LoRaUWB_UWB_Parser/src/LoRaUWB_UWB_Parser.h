@@ -22,10 +22,12 @@ public:
   ParserClass(void);
   ~ParserClass(void);
 
-  bool parse_1D_JSON(const char *input, UWB_1D_Data_t &data);
+  bool parse_1D_JSON(const char *input, UWB_1D_Data_t *data);
 
   // private:
   // void memcopy(char *dest, char *source, uint8_t num);
 };
+
+extern ParserClass parser;
 
 #endif /* __LORAUWB_UWB_PARSER_H__ */

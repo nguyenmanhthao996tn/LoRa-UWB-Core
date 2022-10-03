@@ -2,6 +2,7 @@
 #define __LORA_UWB_UWB_H__
 
 #include "Arduino.h"
+#include "LoRaUWB_UWB_Parser.h"
 
 #define UWB_SHELL_BAUDRATE 921600
 
@@ -35,15 +36,18 @@ public:
   void pause(void);
   void unpause(void);
 
-  char *readLastestData(void) { return lastest_command; }
+  char *readLastestDataJSON(void) { return lastest_command; }
+  bool readLastestData(UWB_1D_Data_t *data);
 
   // DO NOT USE: This function is called by serialEvent3 only.
   void process(char input);
 
 private:
-  char buffer[1024];
   char lastest_command[1024];
+
+  char buffer[1024];
   uint16_t buffer_index;
+  uint8_t bufferReading;
 };
 
 extern UWBClass BoardUWB;

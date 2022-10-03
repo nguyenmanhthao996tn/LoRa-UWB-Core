@@ -8,14 +8,14 @@ ParserClass::~ParserClass(void)
 {
 }
 
-bool ParserClass::parse_1D_JSON(const char *input, UWB_1D_Data_t &data)
+bool ParserClass::parse_1D_JSON(const char *input, UWB_1D_Data_t *data)
 {
 #ifdef PARSE_1D_JSON_MAX_SEARCH_CHAR
 #undef PARSE_1D_JSON_MAX_SEARCH_CHAR
 #endif
 #define PARSE_1D_JSON_MAX_SEARCH_CHAR 127
 
-  if (input == NULL)
+  if ((input == NULL) || (data == NULL))
   {
     return false;
   }
@@ -151,27 +151,29 @@ bool ParserClass::parse_1D_JSON(const char *input, UWB_1D_Data_t &data)
   /* dt_index */
   memset(buffer, '\0', 32);
   memcpy(buffer, (char *)(input + dt_index), dt_counter);
-  data.dt = atoi(buffer);
+  data->dt = atoi(buffer);
 
   /* id_index */
   memset(buffer, '\0', 32);
   memcpy(buffer, (char *)(input + id_index), id_counter);
-  data.id = atoi(buffer);
+  data->id = atoi(buffer);
 
   /* tagid_index */
   memset(buffer, '\0', 32);
   memcpy(buffer, (char *)(input + tagid_index), tagid_counter);
-  data.tag_id = atoi(buffer);
+  data->tag_id = atoi(buffer);
 
   /* lqi_index */
   memset(buffer, '\0', 32);
   memcpy(buffer, (char *)(input + lqi_index), lqi_counter);
-  data.lqi = atoi(buffer);
+  data->lqi = atoi(buffer);
 
   /* dist_index */
   memset(buffer, '\0', 32);
   memcpy(buffer, (char *)(input + dist_index), dist_counter);
-  data.dist = atof(buffer);
+  data->dist = atof(buffer);
 
   return true;
 }
+
+ParserClass parser;

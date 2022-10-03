@@ -6,26 +6,21 @@
 # Datatypes (KEYWORD1)
 #######################################
 
-BoardUWB	KEYWORD1
+BoardButton	KEYWORD1
 
 #######################################
 # Methods and Functions (KEYWORD2)
 #######################################
 
-PWR_UWB_on	KEYWORD2
-PWR_UWB_off	KEYWORD2
-UWB_HardReset	KEYWORD2
-UWB_SoftReset	KEYWORD2
-PWR_Translator_on	KEYWORD2
-PWR_Translator_off	KEYWORD2
-RFSW_Mode1	KEYWORD2
-RFSW_Mode2	KEYWORD2
-begin	KEYWORD2
-end	KEYWORD2
-pause	KEYWORD2
-unpause	KEYWORD2
+read	KEYWORD2
+clearBuffer	KEYWORD2
 
 #######################################
 # Constants (LITERAL1)
 #######################################
 
+ButtonState_t LITERAL1
+BUTTON_NO_CLICK LITERAL1
+BUTTON_SINGLE_CLICK LITERAL1
+BUTTON_DOUBLE_CLICK LITERAL1
+BUTTON_TRIPLE_CLICK LITERAL1
