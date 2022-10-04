@@ -2,8 +2,10 @@
 
 ## Supported boards
 
-### UCA-LEAT
- * [LoRa UWB Board](https://leat.univ-cotedazur.fr/)
+* [UCA-LEAT <b>LoRa UWB Board</b>](https://leat.univ-cotedazur.fr/)
+    - MCU: [STM32L496RGT6](https://www.st.com/en/microcontrollers-microprocessors/stm32l496rg.html)
+    - Ultra-wideband Module: [B-UWB-MOD1](https://www.st.com/en/wireless-connectivity/b-uwb-mod1.html)
+    - LoRa Module: [E22-900M22S](https://www.ebyte.com/en/product-view-news.aspx?id=437)
 
 ## Installing
 
@@ -46,3 +48,8 @@
 ## Credits
 
 This core is based on the [GrumpyOldPizza/arduino-STM32L4](https://github.com/GrumpyOldPizza/arduino-STM32L4)
+
+This project is led by [<b>Amnia Benouakta</b>](mailto:Amina.Benouakta@unice.fr ) & [Prof. <b>Fabien Ferrero</b>](https://github.com/FabienFerrero) at <b>LEAT. Laboratoire d'Electronique, Antennes et Télécommunications. Université Cote d'Azur, CNRS UMR 7248.</b>
+
+###### <i>Source code maintained by <b>mtnguyen</b>.</i>
+
